@@ -1,7 +1,7 @@
 git checkout master
 git pull
 
-projectName="peer-video-chat"
+projectName="silverchat-website"
 
 cd ~/$projectName/server
 rm -rf dist
