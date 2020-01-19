@@ -15,18 +15,22 @@ app.use(express.static(__dirname + '/dist'));
  
  
 const port = process.env.PORT || 3100;
+app.listen(port, () => {
+    console.log(`listening on ${port}`);
+});
 
-if (process.env.USE_SSL) {
-    var serverOptions = {
-        key: fs.readFileSync(path.resolve(__dirname + '/../', 'server.key')),
-        cert: fs.readFileSync(path.resolve(__dirname + '/../', 'server.crt'))
-    };
-    var server = https.createServer(serverOptions, app);
-    server.listen(port, async () => {
-        console.log(`listening on ${port}`);
-    });    
-} else {
-    app.listen(port, async () => {
-        console.log(`listening on ${port}`);
-    });    
-}
+// let serverOptions = {
+//     key: fs.readFileSync(path.resolve(__dirname, '../../peer-video-chat/client/certs/private.key')),
+//     cert: fs.readFileSync(path.resolve(__dirname, '../../peer-video-chat/client/certs/cert.crt'))
+// };
+// let server = https.createServer(serverOptions, app);
+// server.listen(port, async () => {
+//     console.log(`https listening on ${port}`);
+// });
+
+
+// var http = require('http');
+// http.createServer(function (req, res) {
+//     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+//     res.end();
+// }).listen(80);
