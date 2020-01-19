@@ -1,5 +1,8 @@
 <template lang="pug">
-  .b sup bros
+  div
+    .b sup bros
+    iframe(width="600px" height="600px" src="https://localhost/play/xrp/client" allow="camera;microphone")
+
 </template>
 
 <script>
