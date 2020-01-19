@@ -1,7 +1,8 @@
 <template lang="pug">
   div
-    .b sup bros
-    iframe(width="600px" height="600px" src="https://localhost/play/xrp/client" allow="camera;microphone")
+    h1 Silverchat
+    .b test
+    iframe(width="600px" height="600px" src="https://silverchat.co/play/xrp/client" allow="camera;microphone")
 
 </template>
 
