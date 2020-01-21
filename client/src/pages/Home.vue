@@ -1,7 +1,7 @@
 <template lang="pug">
   .home
     header
-      .logo Silverchat
+      img.logo(src="images/logo.png")
     .flex
       section.s1
         .title Convert traffic into sales calls
@@ -21,14 +21,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @font-face {
+      font-family: 'PantonExtraBold';
+      src: url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.eot), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.otf), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.woff2), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.ttf), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.woff)
+  }
   .home {
     height: 100%;
     position: absolute;
   }
   header {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    box-sizing: border-box;
     padding: 20px;
+
     .logo {
-      height: 32px
+      height: 22px;
+      // padding: 6px 5px;
+      // border: hsl(207, 10%, 53%) 2px solid;
+      // border-radius: 6px;
     }
   }
   .flex {
