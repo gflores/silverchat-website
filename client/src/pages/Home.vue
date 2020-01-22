@@ -4,9 +4,10 @@
       img.logo(src="images/logo.png")
     .flex
       section.s1
-        .title Convert traffic into sales calls
+        .title Speak and sell <br/>to your traffic
         .subtitle Direct voice or video calls from anyone visiting your website.
-        .direct-call Direct Call
+        .direct-call
+        .fine-text Currently in closed beta
       section.s2
         .coming-soon Coming Soon...
 
@@ -22,8 +23,8 @@ export default {
 
 <style lang="scss" scoped>
   @font-face {
-      font-family: 'PantonExtraBold';
-      src: url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.eot), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.otf), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.woff2), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.ttf), url(https://d26ik0aqrns2ec.cloudfront.net/Panton/ExtraBold.woff)
+      font-family: 'PantonBlack';
+      src: url(/fonts/PantonBlack.otf)
   }
   .home {
     height: 100%;
@@ -35,6 +36,7 @@ export default {
     height: 62px;
     box-sizing: border-box;
     padding: 20px;
+    background: hsla(210, 4%, 90%, 1);
 
     .logo {
       height: 22px;
@@ -53,19 +55,50 @@ export default {
     padding: 40px 20px;
 
     .direct-call {
-      background: green;
+      margin-top: 40px;
+      background: hsla(120, 91%, 34%, 1);
       width: 100%;
+      height: 55px;
+      border-radius: 2px;
     }
 
     &.s1 {
+      .title {
+        font-family: 'PantonBlack';
+        font-size: 34px;
+        color: #26292c;
+        text-align: center;
+        line-height: 1.2em;
+      }
+      .subtitle {
+        margin-top: 20px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #26292c;
+        font-size: 20px;
+        line-height: 1.5em;
+        text-align: center;
+      }
+
+      .fine-text {
+        margin-top: 20px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #26292c;
+        font-size: 14px;
+        line-height: 1.5em;
+        text-align: center;
+      }
     }
 
     &.s2 {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: grey;
+      background: #7c8994;
       flex-grow: 1;
+      color: #e5e6e7;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
     }
 
   }
