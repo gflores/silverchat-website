@@ -48,7 +48,7 @@ export default {
   .flex {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 72px);
+    height: calc(100% - 62px);
   }
 
   section {
