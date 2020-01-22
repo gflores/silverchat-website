@@ -6,7 +6,7 @@
       section.s1
         .title Speak and sell <br/>to your traffic
         .subtitle Direct voice or video calls from anyone visiting your website.
-        .direct-call
+        iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
         .fine-text Currently in closed beta
       section.s2
         .coming-soon Coming Soon...
@@ -17,7 +17,22 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      instantCallButtonClicked: false
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      focus();
+      var listener = addEventListener('blur', () => {
+        if (document.activeElement.className == "direct-call") {
+          console.log("CLICK !!!");
+          this.instantCallButtonClicked = true;
+        }
+      });
+    }, 100)
+  }
 }
 </script>
 
@@ -56,10 +71,16 @@ export default {
 
     .direct-call {
       margin-top: 40px;
-      background: hsla(120, 91%, 34%, 1);
+      // background: hsla(120, 91%, 34%, 1);
       width: 100%;
       height: 55px;
+      border: 0;
       border-radius: 2px;
+      transition: height 1s;
+
+      &.active {
+        height: 155px;
+      }
     }
 
     &.s1 {
