@@ -4,8 +4,8 @@
       img.logo(src="images/logo.png")
     .flex
       section.s1
-        .title Speak and sell <br/>to your traffic
-        .subtitle Direct voice or video calls from anyone visiting your website.
+        .title Speak and sell<br/>to your traffic
+        .subtitle Instant voice or video calls from anyone visiting your website.
         iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
         .fine-text Currently in closed beta
       section.s2
@@ -79,7 +79,7 @@ export default {
       transition: height 1s;
 
       &.active {
-        height: 155px;
+        height: 355px;
       }
     }
 
@@ -120,6 +120,7 @@ export default {
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 20px;
       font-weight: bold;
+      padding: 0;
     }
 
   }
