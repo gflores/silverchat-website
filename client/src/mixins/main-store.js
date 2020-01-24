@@ -14,5 +14,8 @@ Vue.mixin({
   methods: {
   },
   computed: {
+    icLandingUrl() {
+      return process.env.VUE_APP_IC_LANDING_URL;
+    }
   }
 });

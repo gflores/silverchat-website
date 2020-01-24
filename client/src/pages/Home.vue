@@ -7,7 +7,7 @@
         .title Speak and sell<br/>to your traffic
         .subtitle Instant voice or video calls from anyone visiting your website.
         //- iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
-        iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="https://app.silverchat.co/play/prod1/client" allow="camera;microphone")
+        iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" :src="icLandingUrl" allow="camera;microphone")
         .fine-text Currently in closed beta
       section.s2
         .coming-soon Coming Soon...
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+
+
 export default {
   data(){
     return {
@@ -25,6 +27,8 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      console.log("XX: ", process.env);
+
       focus();
       var listener = addEventListener('blur', () => {
         if (document.activeElement.className == "direct-call") {
