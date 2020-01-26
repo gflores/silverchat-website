@@ -8,9 +8,10 @@
         .subtitle Instant voice or video calls from anyone visiting your website.
         //- iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
         iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" :src="icLandingUrl" allow="camera;microphone")
-        .fine-text Currently in closed beta
+        .fine-text(v-if="instantCallButtonClicked == false") Try calling us !
       section.s2
         .coming-soon Coming Soon...
+      
 
     //- iframe(width="600px" height="600px" src="https://app.silverchat.co/play/xrp/client" allow="camera;microphone")
 
@@ -70,19 +71,26 @@ export default {
     flex-direction: column;
     height: calc(100% - 60px);
   }
-
+  @keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes background-fade-out {
+    from {background: hsla(120, 91%, 34%, 1);}
+    to {background: initial}
+  }
   section {
     padding: 40px 20px;
 
     .direct-call {
       margin-top: 40px;
-      // background: hsla(120, 91%, 34%, 1);
       width: 100%;
       height: 55px;
       border: 0;
       border-radius: 4px;
       transition: height 1s;
-
+      animation: fade-in 2s, background-fade-out 5s ease-in;
+      
       &.active {
         height: 355px;
       }
@@ -92,13 +100,11 @@ export default {
       .title {
         font-family: 'PantonBlack';
         font-size: 34px;
-        color: #26292c;
         text-align: center;
         line-height: 1.2em;
       }
       .subtitle {
         margin-top: 20px;
-        color: #26292c;
         font-size: 20px;
         line-height: 1.5em;
         text-align: center;
@@ -106,7 +112,6 @@ export default {
 
       .fine-text {
         margin-top: 20px;
-        color: #26292c;
         font-size: 14px;
         line-height: 1.5em;
         text-align: center;
