@@ -7,10 +7,12 @@
         .title Speak and sell<br/>to your traffic
         .subtitle Instant voice or video calls from anyone visiting your website.
         //- iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
-        iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" :src="icLandingUrl" allow="camera;microphone")
-        .fine-text(v-if="instantCallButtonClicked == false") Try calling us !
+        //- .direct-call(:class="instantCallButtonClicked ? 'active' : ''" @click="clickDirectCall()")
+        .direct-call
+          .silverchat-location
+        .fine-text(v-if="instantCallButtonClicked == false") Try instant calling !
       section.s2
-        .coming-soon Coming Soon...
+        .coming-soon Contact:<br/>+65 8138 3605
       
 
     //- iframe(width="600px" height="600px" src="https://app.silverchat.co/play/xrp/client" allow="camera;microphone")
@@ -26,18 +28,22 @@ export default {
       instantCallButtonClicked: false
     };
   },
-  mounted() {
-    setTimeout(() => {
-      console.log("XX: ", process.env);
+  methods: {
+    clickDirectCall() {
+      console.log('hello');
+      this.instantCallButtonClicked = true
+    }
+    // setTimeout(() => {
+    //   console.log("XX: ", process.env);
 
-      focus();
-      var listener = addEventListener('blur', () => {
-        if (document.activeElement.className == "direct-call") {
-          console.log("CLICK !!!");
-          this.instantCallButtonClicked = true;
-        }
-      });
-    }, 100)
+    //   focus();
+    //   var listener = addEventListener('blur', () => {
+    //     if (document.activeElement.className == "direct-call") {
+    //       console.log("CLICK !!!");
+    //       this.instantCallButtonClicked = true;
+    //     }
+    //   });
+    // }, 100)
   }
 }
 </script>
@@ -75,24 +81,26 @@ export default {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-  @keyframes background-fade-out {
-    from {background: hsla(120, 91%, 34%, 1);}
-    to {background: initial}
-  }
+  // @keyframes background-fade-out {
+  //   from {background: hsla(120, 91%, 34%, 1);}
+  //   to {background: initial}
+  // }
   section {
     padding: 40px 20px;
 
     .direct-call {
       margin-top: 40px;
       width: 100%;
-      height: 55px;
-      border: 0;
-      border-radius: 4px;
-      transition: height 1s;
-      animation: fade-in 2s, background-fade-out 5s ease-in;
-      
+      // transition: height 1s;
+      // animation: fade-in 2s, background-fade-out 5s ease-in;
+
+      animation: fade-in 2s;
       &.active {
         height: 355px;
+      }
+      .silverchat-location {
+        height: 55px;
+        background: hsla(120, 91%, 34%, 1);
       }
     }
 
@@ -128,6 +136,7 @@ export default {
       font-size: 20px;
       font-weight: bold;
       padding: 0;
+      text-align: center;
     }
 
   }
