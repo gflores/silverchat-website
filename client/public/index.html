@@ -11,7 +11,7 @@
       Silverchat = {init({roomId, selector}){this.roomId=roomId;this.selector=selector}}
     </script>
     <script type="text/javascript">
-      Silverchat.init({roomId: "xrp", selector: ".silverchat-location"});
+      Silverchat.init({roomId: "<%=VUE_APP_ROOM_ID%>", selector: ".silverchat-location"});
     </script>
 
     <title>Silverchat</title>
