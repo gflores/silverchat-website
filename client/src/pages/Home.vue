@@ -5,16 +5,13 @@
     .flex
       section.s1
         .title Convert and<br/>sell more
-        .subtitle Unlock all the hidden features<br/>your website already has.
-        .subtitle Instant voice or video calls from anyone visiting your website.
-        .subtitle Control your visitors browser remotely.
-        //- iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
-        //- .direct-call(:class="instantCallButtonClicked ? 'active' : ''" @click="clickDirectCall()")
+        .subtitle Unlock all the hidden features<br/>your website is capable of.
         .direct-call
           .silverchat-location
-        .fine-text(v-if="instantCallButtonClicked == false") Try instant calling !
+        .subtitle Instant voice or video calls from anyone visiting your website.
+        //- .fine-text(v-if="instantCallButtonClicked == false") Try instant calling !
       section.s2
-        .coming-soon Contact:<br/>+65 8138 3605
+        .coming-soon Contact: <b>+65 8138 3605</b><br/><br/>Take control of your traffic's engagement
       
 
     //- iframe(width="600px" height="600px" src="https://app.silverchat.co/play/xrp/client" allow="camera;microphone")
@@ -136,7 +133,7 @@ export default {
       flex-grow: 1;
       color: #e5e6e7;
       font-size: 20px;
-      font-weight: bold;
+      // font-weight: bold;
       padding: 0;
       text-align: center;
     }
