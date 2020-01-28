@@ -134,7 +134,7 @@ export default {
       color: #e5e6e7;
       font-size: 20px;
       // font-weight: bold;
-      padding: 0;
+      padding: 20px;
       text-align: center;
     }
 
