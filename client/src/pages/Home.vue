@@ -4,8 +4,10 @@
       img.logo(src="images/logo.png")
     .flex
       section.s1
-        .title Speak and sell<br/>to your traffic
+        .title Convert and<br/>sell more
+        .subtitle Unlock all the hidden features<br/>your website already has.
         .subtitle Instant voice or video calls from anyone visiting your website.
+        .subtitle Control your visitors browser remotely.
         //- iframe.direct-call(:class="instantCallButtonClicked ? 'active' : ''" width="600px" height="600px" src="http://localhost:3000/play/xrp/client" allow="camera;microphone")
         //- .direct-call(:class="instantCallButtonClicked ? 'active' : ''" @click="clickDirectCall()")
         .direct-call
