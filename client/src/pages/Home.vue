@@ -4,14 +4,14 @@
       img.logo(src="images/logo.png")
     .flex
       section.s1
-        .title Convert and<br/>sell more
-        .subtitle Unlock all the hidden features<br/>your website is capable of.
+        .title Convert and sell more
+        .subtitle Unlock the hidden features your website is capable of.
         .direct-call
           .silverchat-location
-        .subtitle Instant voice or video calls from anyone visiting your website.
+        .subtitle Instant voice and video calls to your traffic.
         //- .fine-text(v-if="instantCallButtonClicked == false") Try instant calling !
       section.s2
-        .coming-soon Contact: <b>+65 8138 3605</b><br/><br/>Take control of your traffic's engagement
+        .coming-soon Contact: <b>+65 8138 3605</b><br/><br/>Take control of your customer engagement
       
 
     //- iframe(width="600px" height="600px" src="https://app.silverchat.co/play/xrp/client" allow="camera;microphone")
@@ -55,6 +55,7 @@ export default {
   .home {
     height: 100%;
     position: absolute;
+    background: white;
   }
   header {
     display: flex;

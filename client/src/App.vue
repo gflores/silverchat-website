@@ -11,4 +11,9 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+    body {
+        display: flex;
+        justify-content: center;
+        background: hsla(120, 95%, 10%, 1);
+    }
 </style>
