@@ -55,7 +55,6 @@ export default {
   .home {
     height: 100%;
     position: absolute;
-    background: white;
   }
   header {
     display: flex;
@@ -105,6 +104,7 @@ export default {
     }
 
     &.s1 {
+      background: white;
       .title {
         font-family: 'PantonBlack';
         font-size: 34px;
