@@ -14,6 +14,6 @@
     body {
         display: flex;
         justify-content: center;
-        background: hsla(120, 80%, 13%, 1);
+        background: hsla(207, 20%, 20%, 1);
     }
 </style>

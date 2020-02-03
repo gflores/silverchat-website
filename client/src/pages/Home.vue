@@ -32,22 +32,12 @@ export default {
       console.log('hello');
       this.instantCallButtonClicked = true
     }
-    // setTimeout(() => {
-    //   console.log("XX: ", process.env);
-
-    //   focus();
-    //   var listener = addEventListener('blur', () => {
-    //     if (document.activeElement.className == "direct-call") {
-    //       console.log("CLICK !!!");
-    //       this.instantCallButtonClicked = true;
-    //     }
-    //   });
-    // }, 100)
   }
 }
 </script>
 
 <style lang="scss" scoped>
+//hsla(207, 20%, 20%, 1)
   @font-face {
       font-family: 'PantonBlack';
       src: url(/fonts/PantonBlack.otf)
@@ -66,9 +56,6 @@ export default {
 
     .logo {
       height: 20px;
-      // padding: 6px 5px;
-      // border: hsl(207, 10%, 53%) 2px solid;
-      // border-radius: 6px;
     }
   }
   .flex {
