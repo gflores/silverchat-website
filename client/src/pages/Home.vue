@@ -2,6 +2,7 @@
   .home
     header
       img.logo(src="images/logo.png")
+      a.login(:href="appUrl") Login
     .flex
       section.s1
         .title Convert and sell more
@@ -32,6 +33,11 @@ export default {
       console.log('hello');
       this.instantCallButtonClicked = true
     }
+  },
+  computed: {
+    appUrl() {
+      return process.env.VUE_APP_APP_URL;
+    }
   }
 }
 </script>
@@ -53,9 +59,15 @@ export default {
     box-sizing: border-box;
     padding: 20px;
     background: hsla(210, 4%, 90%, 1);
+    justify-content: space-between;
 
     .logo {
       height: 20px;
+    }
+    .login {
+      text-decoration: none;
+      color: #26292c;
+      font-size: 18px;
     }
   }
   .flex {
