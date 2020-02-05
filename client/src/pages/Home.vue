@@ -5,8 +5,8 @@
       a.login(:href="appUrl") Login
     .flex
       section.s1
-        .title Convert and sell more
-        .subtitle Unlock the hidden features your website is capable of.
+        .title Unlock your website's full potential
+        .subtitle Interact with your visitors in real-time
         .direct-call
           .silverchat-location
         .subtitle Instant voice and video calls to your traffic.
@@ -50,6 +50,7 @@ export default {
   }
   .home {
     height: 100%;
+    width: 100%;
     position: absolute;
   }
   header {
@@ -57,9 +58,13 @@ export default {
     align-items: center;
     height: 60px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 0px 20px;
     background: hsla(210, 4%, 90%, 1);
     justify-content: space-between;
+
+    @media only screen and (min-width: 720px) {
+      padding: 0px 50px;
+    }
 
     .logo {
       height: 20px;
@@ -89,6 +94,7 @@ export default {
     .direct-call {
       margin-top: 40px;
       width: 100%;
+      max-width: 360px;
       // transition: height 1s;
       // animation: fade-in 2s, background-fade-out 5s ease-in;
 
@@ -104,11 +110,16 @@ export default {
 
     &.s1 {
       background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .title {
         font-family: 'PantonBlack';
         font-size: 34px;
         text-align: center;
         line-height: 1.2em;
+        max-width: 500px;
       }
       .subtitle {
         margin-top: 20px;
