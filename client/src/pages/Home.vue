@@ -48,7 +48,7 @@ export default {
     position: absolute;
   }
   .top {
-    height: 92%;
+    height: 93%;
     background:white;
     display: flex;
     flex-direction: column;
@@ -139,7 +139,7 @@ export default {
 
   }
   .bottom {
-    height: 8%;
+    height: 7%;
     background: hsla(210, 14%, 6%, 1);
   }
 
