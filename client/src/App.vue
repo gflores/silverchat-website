@@ -8,6 +8,7 @@
         padding: 0;
         font-family: 'Source Sans Pro', sans-serif;
         color: #26292c;
+        font-size: 20px;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
