@@ -6,18 +6,33 @@
         span.chat Demo
       .direct-call
         .silverchat-location
-
+      img.remote-img(:src="currentRemotePicture")
     .bottom
 </template>
 
 <script>
 
+let vueApp;
+
+window.SilverchatController = {
+  updateSubpage(subpage) {
+    vueApp.currentSubpage = subpage;
+  },
+  changePicture({data}) {
+    vueApp.currentRemotePicture = data;
+  }
+};
 
 export default {
   data(){
     return {
-      instantCallButtonClicked: false
+      instantCallButtonClicked: false,
+      currentSubpage: null,
+      currentRemotePicture: null
     };
+  },
+  created(){
+    vueApp = this;
   },
   mounted() {
     Silverchat.init({roomId: process.env.VUE_APP_BOOKING_DEMO_ROOM_ID, selector: ".silverchat-location", isMicRequired: false});
@@ -48,7 +63,7 @@ export default {
     position: absolute;
   }
   .top {
-    height: 93%;
+    min-height: 93%;
     background:white;
     display: flex;
     flex-direction: column;
@@ -137,6 +152,9 @@ export default {
       }
     }
 
+  }
+  .remote-img {
+    width: 75%;
   }
   .bottom {
     height: 7%;
