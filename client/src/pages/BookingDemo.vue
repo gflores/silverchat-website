@@ -20,6 +20,13 @@ window.SilverchatController = {
   },
   changePicture({data}) {
     vueApp.currentRemotePicture = data;
+    setTimeout(() => {
+      window.scroll({
+        top: document.querySelector(".remote-img").offsetTop - 185,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 300);
   }
 };
 
@@ -154,7 +161,7 @@ export default {
 
   }
   .remote-img {
-    width: 75%;
+    width: 95%;
   }
   .bottom {
     height: 7%;

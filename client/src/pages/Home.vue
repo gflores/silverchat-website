@@ -51,7 +51,7 @@ export default {
     position: absolute;
   }
   .top {
-    height: 93%;
+    min-height: 93%;
     background:white;
     display: flex;
     flex-direction: column;
