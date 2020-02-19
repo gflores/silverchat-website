@@ -6,7 +6,8 @@
         span.chat Demo
       .direct-call
         .silverchat-location
-      img.remote-img(:src="currentRemotePicture")
+      video.remote-img(v-if="currentRemotePicture != null && currentRemotePicture.includes('.mp4')" :src="currentRemotePicture" autoplay)
+      img.remote-img(v-else :src="currentRemotePicture")
     .bottom
 </template>
 
@@ -161,7 +162,7 @@ export default {
 
   }
   .remote-img {
-    width: 95%;
+    width: calc(100px + 72%);
   }
   .bottom {
     height: 7%;
