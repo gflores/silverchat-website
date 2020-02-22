@@ -16,6 +16,9 @@
 let vueApp;
 
 window.SilverchatController = {
+  disconnect() {
+    vueApp.currentRemotePicture = "";
+  },
   updateSubpage(subpage) {
     vueApp.currentSubpage = subpage;
   },
